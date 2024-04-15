@@ -1,0 +1,15 @@
+<h1>avcd</h1>
+<main>
+  <form [formGroup]="form">
+    <label>UserId</label>
+    <input type="number" formControlName="userId" />
+    <label>Title</label>
+    <input type="text" formControlName="title" />
+    <label>Body</label>
+    <input type="text" formControlName="body" />
+    <button type="submit" (click)="submit()">Submit</button>
+  </form>
+  <div *ngFor="let keyValuePair of sendform | keyvalue">
+    <p>{{ keyValuePair.key }}: {{ keyValuePair.value }}</p>
+  </div>
+</main>
