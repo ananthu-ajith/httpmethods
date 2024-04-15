@@ -1,14 +1,16 @@
 div
 {
-    height: auto;
+    height: 20vh;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
     button
     {
         height: 40px;
         width: 200px;
-        margin: 30px;
+        // margin: 30px 80px;
         background-color: blue;
         color: white;
         font-size: large;
@@ -22,8 +24,5 @@ div
     button:hover{
         background-color: rgb(28, 28, 199);
     }
-    button:active
-    {
-        scale: 1.05;
-    }
+
 }

@@ -1,4 +1,3 @@
-<h1>avcd</h1>
 <main>
   <form [formGroup]="form">
     <label>UserId</label>
@@ -9,7 +8,9 @@
     <input type="text" formControlName="body" />
     <button type="submit" (click)="submit()">Submit</button>
   </form>
+  <section>
   <div *ngFor="let keyValuePair of sendform | keyvalue">
     <p>{{ keyValuePair.key }}: {{ keyValuePair.value }}</p>
   </div>
+</section>
 </main>

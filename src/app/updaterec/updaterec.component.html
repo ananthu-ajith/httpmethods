@@ -1,0 +1,41 @@
+<main>
+  <h3>Update Record</h3>
+    <form [formGroup]="form">
+      <div>
+      <label>Id</label>
+      <input type="number" formControlName="id" />
+      <label>UserId</label>
+      <input type="number" formControlName="userId" />
+      <label>Title</label>
+      <input type="text" formControlName="title" />
+      <label>Body</label>
+      <input type="text" formControlName="body" />
+    </div>
+      <button type="submit" (click)="update()">Update</button>
+    </form>
+    <section>
+    <div *ngFor="let keyValuePair of sendform | keyvalue">
+      <p>{{ keyValuePair.key }}: {{ keyValuePair.value }}</p>
+    </div>
+  </section>
+  </main>
+
+  <hr>
+  <section class="delete">
+
+    <h3>Delete Record</h3>
+    <label> Id</label>
+    <input type="number" [(ngModel)]="deleteid"/>
+    <button type="submit" (click)="delete()">Delete</button>
+
+  </section>
+
+  <hr>
+  <section class="patch">
+    <label>id</label>
+    <input type="number" [(ngModel)]="patchid"/>
+    <label>Body</label>
+    <input type="text" [(ngModel)]="patchbody.body"/>
+    <button type="submit" (click)="patch()">Patch</button>
+  </section>
+  <hr>

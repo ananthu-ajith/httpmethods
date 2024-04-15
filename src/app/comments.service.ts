@@ -18,4 +18,20 @@ export class CommentsService {
     return this._http.post('https://jsonplaceholder.typicode.com/posts',acd)
   }
 
+  updatedetails(id:number, acd: JSON)
+  {
+    return this._http.put(`https://jsonplaceholder.typicode.com/posts/${id}`,acd)
+  }
+
+  deletedetails(id:number)
+  {
+    return this._http.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+  }
+
+
+  patchdetails(id:number, asd:any)
+  {
+    return this._http.patch(`https://jsonplaceholder.typicode.com/posts/${id}`,asd)
+  }
+
 }
